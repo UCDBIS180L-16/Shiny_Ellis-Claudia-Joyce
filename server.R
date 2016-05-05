@@ -5,20 +5,19 @@ shinyServer(function(input, output) {
   
 
   output$boxPlot <- renderPlot({
-    
-    # set up the plot
+
+   
     pl <- ggplot(data = data.pheno.mds),
-                 #Use aes_string below so that input$trait is interpreted
-                 #correctly.  The other variables need to be quoted
+                 #Use aes_string so variables are interpreted correctly
                  
-                 aes_string(x= input$population,
-                            y= input$trait,
-                            fill= input$population
+                 aes_string(x= input$population, #allows for user to pick popID or region
+                            y= input$trait, #allows user to specify trait of interest
+                            fill= input$population #colors plots based on pop or region
                  )
     )
     
-    if (input$graph == "violin"){
-      pl + geom_violin()
+    if (input$graph == "violin"){ #determines plot type based on user input with 
+      pl + geom_violin()          #boxplot as default
     }
     else{
       pl + geom_boxplot()
