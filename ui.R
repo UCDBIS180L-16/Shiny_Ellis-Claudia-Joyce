@@ -10,7 +10,7 @@ shinyUI(fluidPage(
   #Some helpful information
   helpText("This application creates a plot of your choice for selected rice phenotypes",
            "based on ancestral population or region. Please use the radio box below to",
-           "choose a) your type of plot, b) your phenotypes to display, and c) whether",
+           "choose the a) type of plot, b) phenotypes to display, and c) whether",
            "you want to plot by ancestral population or region."),  
   
   #Sidebar with a radio box to input which type of plot will be displayed
