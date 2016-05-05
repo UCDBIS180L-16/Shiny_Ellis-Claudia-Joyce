@@ -18,10 +18,8 @@ shinyUI(fluidPage(
     sidebarPanel(
       radioButtons("plot",
                    "Choose your type of plot:",
-                   c("Histogram",
-                     "Violin Plot",
-                     "Boxplot",
-                     "Scatter Plot")),
+                   c("Violin Plot",
+                     "Boxplot")),
 
       radioButtons("traits",
                    "Choose the phenotypes you would like to plot:",

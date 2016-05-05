@@ -14,9 +14,9 @@ shinyServer(function(input, output) {
                             y= input$trait, #allows user to specify trait of interest
                             fill= input$population #colors plots based on pop or region
                  )
-    )
     
-    if (input$graph == "violin"){ #determines plot type based on user input with 
+    
+    if (input$plot == "violin"){ #determines plot type based on user input with 
       pl + geom_violin()          #boxplot as default
     }
     else{
