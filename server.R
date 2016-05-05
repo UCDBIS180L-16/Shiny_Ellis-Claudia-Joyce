@@ -16,7 +16,7 @@ shinyServer(function(input, output) {
                  )
     )
     
-    if (input$plot == "violin"){ #determines plot type based on user input with 
+    if (input$plot == "Violin Plot"){ #determines plot type based on user input with 
       pl + geom_violin()          #boxplot as default
     }
     else{
